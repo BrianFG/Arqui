@@ -1,5 +1,9 @@
 require ('./models/clases')
 
+
+
+
+
 def create_game (state, substate, money, life, fights, respect)
   coin1 = CoinFlipper.new(0,"Encontraste una cartera, tira una moneda para probar tu suerte", 
     Proc.new{|room, game| game.money += 10; room.go_sub(1); "Encontraste 10 varos"} , 
@@ -130,12 +134,70 @@ def create_game2(state, substate, money, life, fights, respect)
 ##Room 36
   room36 = Room.new(36, "Sigues caminando por la calle, ves una Fuente en donde varias personas se estan bañando")
   coin1 = CoinFlipper.new(0,"Tira una moneda", 
-    Proc.new{|room, game| game.go_state(36); "Ahora te diriges al norte"} , 
-    Proc.new{|room, game| game.go_state(36);  "Ahora te dirijes al sur"})
+    Proc.new{|room, game| game.go_state(41); "Ahora te diriges al norte"} , 
+    Proc.new{|room, game| game.go_state(15);  "Ahora te dirijes al sur"})
   room36.state = coin1
   room36.add_state(coin1)
   game.set_state(36, room36);
   
+
+
+########################################################################################################################################
+##Room 41
+  room41 = Room.new(41, "Dejas la fuente atras y descubres una calle llena de cholos")
+  coin1 = CoinFlipper.new(0,"Tira una moneda para decidir a que cholo dirigirte", 
+    Proc.new{|room, game| room.go_sub(1); game.respect+=20; "Le has caido bien al cholo, se ponen a bailar cholocumbia y tu respeto aumenta"} , 
+    Proc.new{|room, game| room.go_sub(1); game.life-=15; "El cholo te ha mordido y tu vida baja 15 puntos"})
+  move  = Move.new(1, "Dirigete al sur" , 
+    nil , Proc.new{|room, game| game.go_state(35) ; "Caminas hacia el sur"} ,nil, nil)
+  #35
+  room41.state = coin1
+  room41.add_state(coin1).add_state(move)
+  game.set_state(41, room41)
+
+########################################################################################################################################
+##Room 15
+
+  room15 = Room.new(15, "En la misma calle descubres una gasolinera")
+  move  = Move.new(0, "Si quieres explorar la gasolinera ve hacia el norte. Si quieres huir ve hacia el sur" , 
+    Proc.new{|room, game| game.go_state(12) ; "Caminas hacia el norte para explorar"} , Proc.new{|room, game| game.go_state(24) ; "Caminas hacia el sur"} ,nil, nil)
+  room15.state = move
+  room15.add_state(move)
+  game.set_state(15, room15)
+
+########################################################################################################################################
+##Room 12
+
+  room12 = Room.new(12, "Entras al edificio de la gasolinera lentamente, huele a mona de guayaba")
+  coin1 = CoinFlipper.new(0,"Has encontrado una mochila, puede contener buenas cosas. Prueba tu suerte tirando una moneda", 
+    Proc.new{|room, game| game.go_state(42); game.respect+=3; "Has encontrado una navaja legendaria, tu respeto incrementará"} , 
+    Proc.new{|room, game| game.go_state(42); game.life-=3; "La mochila contenía jeringas usadas, te picas con una de ellas y tu vida baja. Escapas de ese lugar por el sur"})
+
+  room12.state = coin1
+  room12.add_state(coin1)
+  game.set_state(12, room12)
+
+########################################################################################################################################
+##Room 24 
+  room24 = Room.new(24, "Este lugar es totalmente diferente a todos los demás, un hermoso y limpio jardín en donde descansar")
+  move  = Move.new(0, "Por lugar para descansar, tu vida subiera a 90 puntos cuando decidas salirte. camina hacia el Sur" , 
+     nil , Proc.new{|room, game| game.go_state(24); game.life=90; "Caminas hacia el sur"} ,nil, nil)
+
+  room24.state= move
+  room24.add_state(move)
+  game.set_state(24, room24)
+
+########################################################################################################################################
+##Room 35
+
+  room35 = Room.new(35, "Llegas al cuarto principal de la bodega, ahi se encuentra el jardin “magico” lleno de droga")
+  coin1 = CoinFlipper.new(0,"Hay un obstaculo en el camino, tira una moneda para probar tu suerte", 
+    Proc.new{|room, game| game.go_state(8); "Te haz tropezado y causado un alboroto en la otra sala"} , 
+    Proc.new{|room, game| game.go_state(9); "Has pasado el obstaculo y ahora sales de la sala"})
+  room35.state = coin1
+  room35.add_state(coin1)
+  game.set_state(35, room35)
+
 
   game.go_state(state)
   game.state.go_sub(substate)
