@@ -1,0 +1,149 @@
+body{
+
+    background-color: rgba(236, 240, 241,1.0);
+}
+
+@font-face {
+    font-family: graffiti;
+    src: url('/fonts/FromStreetArt.ttf'); 
+}
+
+@font-face {
+    font-family: graff;
+    src: url('/fonts/GrandStylus.ttf'); 
+}
+
+
+@font-face{
+    font-family: number-graff;
+    src: url('/fonts/Searfont.ttf');
+}
+.title{
+    font-family: graffiti;
+    font-size: 4em;
+    text-align: center;
+
+}
+
+.name {
+    font-family: graff;
+    font-size: 2.5em;
+    border-bottom: #000 solid 1px;
+    margin-bottom: 7px;
+}
+
+.arrow{
+    font-size: 2.3em;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    padding-right: 5px;
+
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 60px;
+  height: 60px;
+  padding: 8px 4px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 30px;
+}
+
+#control-2{
+    margin-top: 5px;
+    text-align: right;
+    padding-left: 60px;
+
+}
+
+
+.inline{ display: inline-block;}
+
+#text{
+    height: 220px;
+    overflow: scroll;
+    background-color: rgba(44, 62, 80,1.0);
+    color: rgba(236, 240, 241,1.0);
+}
+
+.container{
+    margin-top: 15px;
+}
+
+.life{
+    color: #F22613;
+    font-family: graff;
+    font-size: 1.4em;
+}
+
+.money{
+    color: #2ECC71;
+    font-family: graff;
+    font-size: 1.4em;
+}
+
+.fights{
+    color: #4183D7;
+    font-family: graff;
+    font-size: 1.4em;
+}
+
+.respect{
+    color: #D35400;
+    font-family: graff;
+    font-size: 1.4em;
+}
+
+#control {
+    margin-top: 3px;
+    border: #FFF solid 3px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(189, 195, 199,0.7);
+
+}
+
+.box1{
+    margin-top: 15px;
+}
+
+#id, #money, #fights, #respect{
+    font-family: number-graff;
+    font-size: 1.1em;
+}
+
+#stats{
+    background-color: rgba(189, 195, 199,0.7);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#room-desc{
+    margin-top: 20px;
+    background-color: #2ecc71;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#text{
+    margin-top: 20px;
+}

@@ -1,0 +1,113 @@
+<div class="container">
+
+<div class="title">Sobrebibiendo a Ekatepec</div>
+
+
+<div class="col-sm-4 box1">
+  <div class="col-sm-12" id="stats">
+  <div class="name">El <%=h @name %></div>
+    <div class="row">
+      <div class="col-xs-6 life">
+        <span class="glyphicon glyphicon-heart"></span> Salud: 
+      </div>
+      <div class="col-xs-6"> 
+      <div class="progress">
+  <div class="progress-bar progress-bar-striped active progress-bar-danger" id="life" role="progressbar"
+  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    40%
+  </div>
+</div>
+      </div>
+    </div> 
+    <div class="row money">
+      <div class="col-xs-6 ">
+        <span class="glyphicon glyphicon-usd"></span> Varo:
+      </div> 
+      <div class="col-xs-6" id="money"></div>
+      </div>
+    <div class="row respect">
+      <div class="col-xs-6 ">
+        <span class="glyphicon glyphicon-thumbs-up"></span> Respeto:
+      </div> 
+      <div class="col-xs-6" id="respect"></div>
+    </div>
+    <div class="row fights">
+      <div class="col-xs-6">
+        <span class="glyphicon glyphicon-pushpin"></span> Peleas:
+      </div> 
+      <div class="col-xs-6" id="fights"></div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+  <div class="col-sm-8" id="text">
+    Text
+  </div>
+
+<div class="col-sm-12">
+  <div class="col-sm-4" id="room-desc">
+  description
+  </div>
+  <div class="col-sm-6 col-sm-offset-2" id="control" >
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          <button type="button" id="north" class="btn btn-md btn-info arrow hvr-bounce-in">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4  ">
+        <button type="button" id="west" class="btn btn-md btn-info arrow hvr-bounce-in">
+          <span class="glyphicon glyphicon-arrow-left"></span>
+          </button>
+        </div>
+        <div class="col-xs-4 col-xs-offset-4">
+        <button type="button" id="east" class="btn btn-md btn-info arrow hvr-bounce-in">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+        <button type="button" id="south" class="btn btn-md btn-info arrow hvr-bounce-in">
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8" id="control-2">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-4">
+        <button type="button" id="flip_coin" class="btn btn-xl btn-warning btn-circle hvr-bounce-in" title="Tirar moneda">
+        <img src="/images/flip.png"  width="40px" height="40px">
+        </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 col-md-offset-2">
+        <button type="button" id="fight" class="btn btn-xl btn-danger btn-circle hvr-bounce-in" title="Pelear">
+        <img src="/images/fight.png"  width="40px" height="40px">
+        </button>
+        </div>
+
+        <div class="col-md-3 col-md-offset-1">
+        <button type="button" id="run" class="btn btn-xl btn-success btn-circle hvr-bounce-in" title="Huir">
+        <img src="/images/run.png"  width="40px" height="40px">
+        </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
