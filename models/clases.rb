@@ -6,12 +6,27 @@ class GameController
     @respect = respect
     @fights = fights
     @states = []
-    @states << state
-    @state = state
 	end
+
+  def set_state(index, state)
+
+    @states[index] = state
+  end
+
+  def go_state (index)
+    @state = @states[index]
+  end
 
   def stats
     {:money => @money , :life => @life, :fights => @fights, :respect => @respect, :state => @state.id, :substate => @state.state.id}
+  end
+
+  def lost?
+    @life <=0
+  end
+
+  def won?
+    false
   end
 
   def index
@@ -150,19 +165,35 @@ class Move  < SubState
   end
 
   def north (room , game)
-    @up.call(room, game)
+    if @up.nil?
+      "No puedes ir al Norte"
+    else
+      @up.call(room, game)
+    end
   end
 
   def south (room , game)
-    @down.call(room, game)
+    if @down.nil?
+      "No puedes ir al Sur"
+    else
+      @down.call(room, game)
+    end
   end
 
   def east (room , game)
-    @right.call(room, game)
+    if @right.nil?
+      "No puedes ir al Este"
+    else
+      @right.call(room, game)
+    end
   end
 
   def west (room , game)
-    @left.call(room, game)
+    if @west.nil?
+      "No puedes ir al Oeste"
+    else
+      @west.call(room, game)
+    end
   end
 end
 

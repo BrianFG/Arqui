@@ -8,6 +8,7 @@ $().ready(function () {
         $("#money").html(r.money);
         $("#respect").html(r.respect);
         $("#fights").html(r.fights);
+
     });
   }
 
@@ -56,6 +57,9 @@ function next_command (method){
         text.append(message).append(instructions);
         text.scrollTop(text[0].scrollHeight);
         $("#room-desc").html(r.description);
+        if(r.lost){
+          alert("pierde");
+        }
         refresh_state();
     });
 }

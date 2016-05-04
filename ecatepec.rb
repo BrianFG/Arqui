@@ -32,7 +32,7 @@ end
 get '/create_game' do
   @name = params[:name]
   if @name
-    code = games.insert(name: @name, state: 0, substate: 0, money: 100, life: 100, fights: 0, respect: 0)
+    code = games.insert(name: @name, state: 7, substate: 0, money: 100, life: 100, fights: 0, respect: 0)
     session[:code] = code
     session[:name] = @name
   end  
@@ -43,11 +43,14 @@ get '/next' do
   method = params[:method]
   code = session[:code]
   row = games[id: code]
-  game = create_game(row[:state], row[:substate], row[:money], row[:life], row[:fights], row[:respect])
+  game = create_game2(row[:state], row[:substate], row[:money], row[:life], row[:fights], row[:respect])
   message = game.send(method)
   stats = game.stats
   games.where(id: code).update(stats)
-  "#{{:message => message, :instructions => game.instructions , :description => game.description}.to_json}"
+  "#{{:message => message,
+   :instructions => game.instructions ,
+    :description => game.description ,
+    :lost => game.lost?}.to_json}"
 end
 
 get '/state' do
