@@ -1,3 +1,12 @@
+# Final Project: A Text Adventure Game
+# Date: 05-May-2016
+# Authors: Alejandro Rojas Cepeda
+#          Brian Flores Gonzalez
+#          Eduardo Azuri Gaytan Martinez
+#          Eduardo Rodriguez Ruiz
+#          
+
+
 require ('./models/clases')
 
 

@@ -1,3 +1,13 @@
+# Final Project: A Text Adventure Game
+# Date: 05-May-2016
+# Authors: Alejandro Rojas Cepeda
+#          Brian Flores Gonzalez
+#          Eduardo Azuri Gaytan Martinez
+#          Eduardo Rodriguez Ruiz
+#          
+
+
+
 #Creates a new game object containing the following attributes: 
 #state, life, money, fights and respect.
 class GameController
