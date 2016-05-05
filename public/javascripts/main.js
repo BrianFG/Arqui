@@ -4,10 +4,10 @@ $().ready(function () {
   function refresh_state (){
     $.getJSON("state", function(r){
       $('#life').css('width', r.life+'%').attr('aria-valuenow', r.life).html(r.life); 
-
-        $("#money").html(r.money);
-        $("#respect").html(r.respect);
-        $("#fights").html(r.fights + "  " + r.state);
+      $("#money").html(r.money);
+      $("#respect").html(r.respect);
+      $("#fights").html(r.fights);
+      $("#sector").html("Sector ").append(r.state);
 
     });
   }
@@ -75,6 +75,8 @@ function next_command (method){
   refresh_state();
   $.getJSON("next",{method: "description"}, function(r){
     $("#room-desc").html(r.description);
+    $("#text").html(r.instructions);
+    $("#sector").html("Sector: ").append(r.state);
   });
 
 });
