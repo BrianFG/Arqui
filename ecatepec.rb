@@ -50,7 +50,8 @@ get '/next' do
   "#{{:message => message,
    :instructions => game.instructions ,
     :description => game.description ,
-    :lost => game.lost?}.to_json}"
+    :lost => game.lost? ,
+    :won => game.won?}.to_json}"
 end
 
 get '/state' do

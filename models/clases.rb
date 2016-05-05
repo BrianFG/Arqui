@@ -26,7 +26,7 @@ class GameController
   end
 
   def won?
-    false
+    @state.id == 14
   end
 
   def index

@@ -58,7 +58,10 @@ function next_command (method){
         text.scrollTop(text[0].scrollHeight);
         $("#room-desc").html(r.description);
         if(r.lost){
-          alert("pierde");
+          alert("Perdiste");
+        }
+        if(r.won){
+          alert("Ganaste");
         }
         refresh_state();
     });
