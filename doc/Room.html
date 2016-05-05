@@ -1,591 +1,651 @@
-<!DOCTYPE html>
-
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-<title>class Room - RDoc Documentation</title>
+  <title>Class: Room</title>
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
-</script>
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
-<script src="./js/jquery.js"></script>
-<script src="./js/darkfish.js"></script>
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
 
-<link href="./css/fonts.css" rel="stylesheet">
-<link href="./css/rdoc.css" rel="stylesheet">
+</head>
+<body id="top" class="class">
 
-
-
-<body id="top" role="document" class="class">
-<nav role="navigation">
-  <div id="project-navigation">
-    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
-  <h2>
-    <a href="./index.html" rel="home">Home</a>
-  </h2>
-
-  <div id="table-of-contents-navigation">
-    <a href="./table_of_contents.html#pages">Pages</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </div>
-</div>
-
-    <div id="search-section" role="search" class="project-section initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <div id="search-field-wrapper">
-      <input id="search-field" role="combobox" aria-label="Search"
-             aria-autocomplete="list" aria-controls="search-results"
-             type="text" name="search" placeholder="Search" spellcheck="false"
-             title="Type to search, Up and Down to navigate, Enter to load">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
     </div>
 
-    <ul id="search-results" aria-label="Search Results"
-        aria-busy="false" aria-expanded="false"
-        aria-atomic="false" class="initially-hidden"></ul>
-  </form>
-</div>
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./models/clases_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="models/clases.rb">models/clases.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
 
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add_state">#add_state</a></li>
+          
+          <li><a href="#method-i-east">#east</a></li>
+          
+          <li><a href="#method-i-fight">#fight</a></li>
+          
+          <li><a href="#method-i-flip_coin">#flip_coin</a></li>
+          
+          <li><a href="#method-i-go_sub">#go_sub</a></li>
+          
+          <li><a href="#method-i-instructions">#instructions</a></li>
+          
+          <li><a href="#method-i-north">#north</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+          <li><a href="#method-i-south">#south</a></li>
+          
+          <li><a href="#method-i-west">#west</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./CoinFlipper.html">CoinFlipper</a></li>
+        
+          <li><a href="./Fight.html">Fight</a></li>
+        
+          <li><a href="./GameController.html">GameController</a></li>
+        
+          <li><a href="./Move.html">Move</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Room.html">Room</a></li>
+        
+          <li><a href="./SubState.html">SubState</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
   </div>
 
-  
+  <div id="documentation">
+    <h1 class="class">Room</h1>
 
-  <div id="class-metadata">
-    
-    <div id="parent-class-section" class="nav-section">
-  <h3>Parent</h3>
-
-  
-  <p class="link"><a href="Object.html">Object</a>
-  
-</div>
-
-    
-    
-    <!-- Method Quickref -->
-<div id="method-list-section" class="nav-section">
-  <h3>Methods</h3>
-
-  <ul class="link-list" role="directory">
-    
-    <li ><a href="#method-c-new">::new</a>
-    
-    <li ><a href="#method-i-add_state">#add_state</a>
-    
-    <li ><a href="#method-i-east">#east</a>
-    
-    <li ><a href="#method-i-fight">#fight</a>
-    
-    <li ><a href="#method-i-flip_coin">#flip_coin</a>
-    
-    <li ><a href="#method-i-go_sub">#go_sub</a>
-    
-    <li ><a href="#method-i-instructions">#instructions</a>
-    
-    <li ><a href="#method-i-north">#north</a>
-    
-    <li ><a href="#method-i-run">#run</a>
-    
-    <li ><a href="#method-i-south">#south</a>
-    
-    <li ><a href="#method-i-west">#west</a>
-    
-  </ul>
-</div>
-
-  </div>
-</nav>
-
-<main role="main" aria-labelledby="class-Room">
-  <h1 id="class-Room" class="class">
-    class Room
-  </h1>
-
-  <section class="description">
-    
+    <div id="description" class="description">
+      
 <p>Class that represents a room object inside the game and handles the
 “space”, contains the following attributes: states, state, description and
 id.</p>
 
-  </section>
-
-  
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+    </div><!-- description -->
 
     
-
     
-
     
-    <section class="attribute-method-details" class="method-section">
-      <header>
-        <h3>Attributes</h3>
-      </header>
+    <div id="5Buntitled-5D" class="documentation-section">
+      
 
       
-      <div id="attribute-i-description" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">description</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
 
-        <div class="method-description">
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
         
-        <p>The description of the current state (the instructions and events that the
+        <div id="description-attribute-method" class="method-detail">
+          <a name="description"></a>
+          
+          <a name="description="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">description</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The description of the current state (the instructions and events that the
 state has).</p>
-        
+          
+          </div>
         </div>
-      </div>
+        
+        <div id="id-attribute-method" class="method-detail">
+          <a name="id"></a>
+          
+          <a name="id="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">id</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The id that permits identifying the state that the game is currently in.</p>
+          
+          </div>
+        </div>
+        
+        <div id="state-attribute-method" class="method-detail">
+          <a name="state"></a>
+          
+          <a name="state="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">state</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The current state that the game is in and that will be passed onto states.</p>
+          
+          </div>
+        </div>
+        
+        <div id="states-attribute-method" class="method-detail">
+          <a name="states"></a>
+          
+          <a name="states="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">states</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Array that contains the set of states that the game has.</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
       
-      <div id="attribute-i-id" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">id</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
 
-        <div class="method-description">
-        
-        <p>The id that permits identifying the state that the game is currently in.</p>
-        
-        </div>
-      </div>
+      <!-- Methods -->
       
-      <div id="attribute-i-state" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">state</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
 
-        <div class="method-description">
-        
-        <p>The current state that the game is in and that will be passed onto states.</p>
-        
-        </div>
-      </div>
       
-      <div id="attribute-i-states" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">states</span><span
-            class="attribute-access-type">[RW]</span>
-        </div>
-
-        <div class="method-description">
-        
-        <p>Array that contains the set of states that the game has.</p>
-        
-        </div>
-      </div>
-      
-    </section>
-    
-
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
-       <header>
-         <h3>Public Class Methods</h3>
-       </header>
-
-    
-      <div id="method-c-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">(id, description)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Init method for all the attributes in this class (id, description).</p>
-          
-          
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
 
           
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 120</span>
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(id, description)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Init method for all the attributes in this class (id, description).</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 120</span>
     <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> (<span class="ruby-identifier">id</span>, <span class="ruby-identifier">description</span>)
             <span class="ruby-ivar">@states</span> = []
 <span class="ruby-ivar">@state</span> 
             <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
             <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
     <span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add_state-method" class="method-detail ">
+          <a name="method-i-add_state"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_state</span><span
+              class="method-args">(s)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
+          <div class="method-description">
+            
+            <p>Adds the current Substate to the current room.</p>
+            
 
-        
-      </div>
-
-    
-    </section>
-  
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
-       <header>
-         <h3>Public Instance Methods</h3>
-       </header>
-
-    
-      <div id="method-i-add_state" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">add_state</span><span
-            class="method-args">(s)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Adds the current Substate to the current room.</p>
-          
-          
-
-          
-          <div class="method-source-code" id="add_state-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 128</span>
+            
+            <div class="method-source-code" id="add_state-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 128</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">s</span>)
   <span class="ruby-ivar">@states</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">s</span>
   <span class="ruby-keyword">self</span>
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- add_state-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_state-method -->
+
+      
+        <div id="east-method" class="method-detail ">
+          <a name="method-i-east"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">east</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-east" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">east</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>In case the action is needed, the player will choose to move east and
+          <div class="method-description">
+            
+            <p>In case the action is needed, the player will choose to move east and
 active the corresponding action.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="east-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 161</span>
+            
+            <div class="method-source-code" id="east-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 161</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">east</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">east</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- east-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- east-method -->
+
+      
+        <div id="fight-method" class="method-detail ">
+          <a name="method-i-fight"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fight</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-fight" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">fight</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>The action of fighting against enemies in case the action is triggered.
+          <div class="method-description">
+            
+            <p>The action of fighting against enemies in case the action is triggered.
 Depending on the state it can  affect the stats of the player (health,
 wealth or respect).</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="fight-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 146</span>
+            
+            <div class="method-source-code" id="fight-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 146</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">fight</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">fight</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- fight-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fight-method -->
+
+      
+        <div id="flip_coin-method" class="method-detail ">
+          <a name="method-i-flip_coin"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">flip_coin</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-flip_coin" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">flip_coin</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>The action of tossing a coin inside the game in case the action is needed.
+          <div class="method-description">
+            
+            <p>The action of tossing a coin inside the game in case the action is needed.
 It has two possible outcomes: Head or Tails.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="flip_coin-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 140</span>
+            
+            <div class="method-source-code" id="flip_coin-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 140</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">flip_coin</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">flip_coin</span>(<span class="ruby-keyword">self</span> , <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- flip_coin-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- flip_coin-method -->
+
+      
+        <div id="go_sub-method" class="method-detail ">
+          <a name="method-i-go_sub"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">go_sub</span><span
+              class="method-args">(num)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-go_sub" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">go_sub</span><span
-            class="method-args">(num)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Depending on the possible substates contained in the current state (enabled
+          <div class="method-description">
+            
+            <p>Depending on the possible substates contained in the current state (enabled
 coin flip, enabled fights, etc.) sends the id number of the required
 substate.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="go_sub-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 177</span>
+            
+            <div class="method-source-code" id="go_sub-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 177</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">go_sub</span>(<span class="ruby-identifier">num</span>)
   <span class="ruby-ivar">@state</span> = <span class="ruby-ivar">@states</span>[<span class="ruby-identifier">num</span>]
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- go_sub-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- go_sub-method -->
+
+      
+        <div id="instructions-method" class="method-detail ">
+          <a name="method-i-instructions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">instructions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-instructions" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">instructions</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>The instructions that the player has to folllow in order to continue moving
+          <div class="method-description">
+            
+            <p>The instructions that the player has to folllow in order to continue moving
 forward with the game</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="instructions-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 134</span>
+            
+            <div class="method-source-code" id="instructions-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 134</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">instructions</span>
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">instructions</span>
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- instructions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- instructions-method -->
+
+      
+        <div id="north-method" class="method-detail ">
+          <a name="method-i-north"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">north</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-north" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">north</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>In case the action is needed, the player will choose to move north and
+          <div class="method-description">
+            
+            <p>In case the action is needed, the player will choose to move north and
 active the corresponding action.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="north-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 156</span>
+            
+            <div class="method-source-code" id="north-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 156</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">north</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">north</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- north-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- north-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-run" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">run</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>While in the state of fighting, the player can run from it escaping said
+          <div class="method-description">
+            
+            <p>While in the state of fighting, the player can run from it escaping said
 state.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="run-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 151</span>
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 151</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">run</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+        <div id="south-method" class="method-detail ">
+          <a name="method-i-south"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">south</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-south" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">south</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>In case the action is needed, the player will choose to move south and
+          <div class="method-description">
+            
+            <p>In case the action is needed, the player will choose to move south and
 active the corresponding action.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="south-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 171</span>
+            
+            <div class="method-source-code" id="south-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 171</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">south</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">south</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- south-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- south-method -->
+
+      
+        <div id="west-method" class="method-detail ">
+          <a name="method-i-west"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">west</span><span
+              class="method-args">(game)</span>
+            <span class="method-click-advice">click to toggle source</span>
           </div>
           
-        </div>
 
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-west" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">west</span><span
-            class="method-args">(game)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>In case the action is needed, the player will choose to move west and
+          <div class="method-description">
+            
+            <p>In case the action is needed, the player will choose to move west and
 active the corresponding action.</p>
-          
-          
+            
 
-          
-          <div class="method-source-code" id="west-source">
-            <pre><span class="ruby-comment"># File models/clases.rb, line 166</span>
+            
+            <div class="method-source-code" id="west-source">
+<pre>
+<span class="ruby-comment"># File models/clases.rb, line 166</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">west</span> (<span class="ruby-identifier">game</span>)
   <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">west</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">game</span>)
 <span class="ruby-keyword">end</span></pre>
+            </div><!-- west-source -->
+            
           </div>
+
           
-        </div>
 
-        
+          
+        </div><!-- west-method -->
 
-        
-      </div>
-
+      
+      </div><!-- public-instance-method-details -->
     
-    </section>
+    </div><!-- 5Buntitled-5D -->
   
-  </section>
-</main>
 
+  </div><!-- documentation -->
 
-<footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
-  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
-</footer>
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
 

@@ -33,41 +33,44 @@ We'll now explain the different views that conform the architectural model of ou
 
 The logical view contains information about the various parts of the system. In UML the logical view is typically modelled using <em>class diagrams</em>.
 
-For example, the following figure represents the UML class diagram for the +Greeter+ model and its factory class:
+In the following diagram, it displays in UML classes diagrams the GameController, Room, SubState, Move, CoinFlipper,Fight  classes and its subclasses for the Model.
+
 
 link:../doc/images/logical.png
 
-You can include as many of these diagrams as you consider necessary. Note that you only need to specify the names of the classes and their relationships. Don't include attributes or method names in these diagrams.
-
-To include an image in this document, copy it to the +images+ directory and refer it as: +link:../images/some_image.png+. You can use any web supported image format (PNG, JPEG, GIF, etc.).
 
 === Process View
 
-The process view describes the concurrent processes within the system. In UML, <em>activity diagrams</em> are used to model this view.
+Even though the system handles sessions apart from others, the system has no concurrent processes due the fact of the simple design.
 
 === Development View
-The development view focusses on software modules and subsystems. In UML, <em>package diagrams</em> are used to model the development view.
+
+The system is a stand-alone application, thus, it has no software modules or subsystems.
+
+
 
 === Physical View
 
-The physical view describes the physical deployment of the system, revealing which pieces of software run on what pieces of hardware. In UML, <em>deployment diagrams</em> are used to model the physical view.
+In order for the system to function, the Web server that hosts "ecatepec.rb", the Sinatra Framework, SQL-Lite and Sequel need to be installed. The following diagram shows the physicial implementation:
 
 For example, this is the deployment diagram for our application:
 
 link:../doc/images/physical.png
 
 === Scenarios
-This view describes the functionality of the system from the perspective from outside world. It contains diagrams describing what the system is supposed to do from a black box perspective. UML <em>use case diagrams</em> are used for this view.
+
+In a regular scenario, the user enters the web page of the server. Then, it asks to enter his/her name and after that, the epic adventure starts. At first, the user is greeted with the view that displays his/hers current stats [health, respect & money], the screen that narrates the adventure and the buttons the user can push in order to make said actions. The following diagram displays the actions the user can do:
 
 link:../doc/images/cases.png
+
 
 == Patterns Used
 
 The patterns that were used within our project are:
 
-- <b>State Pattern</b>: The +ecatepec.rb+ file consists of a series of Sinatra _routes_. Sinatra is a DSL for creating web applications in Ruby.
-- <b>Model View Controller</b>: The application follows the classical web implementation of the MVC architectural pattern. The models (+.rb+ files) and views (+.erb+ files) are stored in the corresponding +models+ and +views+ directory. The controller is contained in +server.rb+ file.
-- <b>Strategy Factory</b>: The +gameFactory+ is used to create +Game+ instances by specifying the desired language during its creation.
+- <b>State Pattern</b>: We used this pattern in order to separate the functionality into states and substates that could handle the instances of the game better. The states are instances of +Room+ and are handled in the +clases.rb+. 
+- <b>Model View Controller</b>: The application follows the classical web implementation of the MVC architectural pattern. The models (+.rb+ files) and views (+.erb+ files) are stored in the corresponding +models+ and +views+ directory. The controller is contained in +ecatepec.rb+ file.
+- <b>Strategy Factory</b>: Each of our states behaves differently so we send a +Proc+ with all the code that it must implement. This is handled in the +gameFactory+ class that is contained inside the +clases.rb+.
 
 == Acknowledgments
 

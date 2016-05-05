@@ -1,30 +1,6 @@
-Thu, 05 May 2016 15:11:07 -0500
-./ecatepec.rb	Thu, 05 May 2016 13:57:14 -0500
-./game.db	Thu, 05 May 2016 13:57:14 -0500
-./models/clases.rb	Thu, 05 May 2016 12:23:38 -0500
-./models/game.rb	Thu, 05 May 2016 12:04:46 -0500
-./models/gameFactory.rb	Thu, 05 May 2016 12:46:35 -0500
-./public/fonts/CurseoftheZombie.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/fofbb_reg.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/FromStreetArt.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/glyphicons-halflings-regular.eot	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/glyphicons-halflings-regular.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/glyphicons-halflings-regular.woff	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/glyphicons-halflings-regular.woff2	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/GrandStylus.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/NextCustom.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/Searfont.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/fonts/Street-Robot-Inline.ttf	Thu, 05 May 2016 12:04:46 -0500
-./public/images/cases.png	Thu, 05 May 2016 15:07:24 -0500
-./public/images/fight.png	Thu, 05 May 2016 12:04:46 -0500
-./public/images/fight2.png	Thu, 05 May 2016 12:04:46 -0500
-./public/images/flip.png	Thu, 05 May 2016 12:04:46 -0500
-./public/images/gato.png	Thu, 05 May 2016 12:04:46 -0500
-./public/images/logical.png	Thu, 05 May 2016 15:05:19 -0500
-./public/images/physical.png	Thu, 05 May 2016 13:19:33 -0500
-./public/images/run.png	Thu, 05 May 2016 12:04:46 -0500
-./public/images/sonrisa.png	Thu, 05 May 2016 12:04:46 -0500
-./README.txt	Thu, 05 May 2016 15:11:03 -0500
-./views/index.erb	Thu, 05 May 2016 12:04:46 -0500
-./views/layout.erb	Thu, 05 May 2016 12:04:46 -0500
-./views/play.erb	Thu, 05 May 2016 13:57:14 -0500
+Thu, 05 May 2016 15:51:41 -0500
+./README.txt	Thu, 05 May 2016 15:51:40 -0500
+./models/clases.rb	Thu, 05 May 2016 15:01:12 -0500
+./models/game.rb	Thu, 05 May 2016 15:01:12 -0500
+./models/gameFactory.rb	Thu, 05 May 2016 15:01:12 -0500
+./ecatepec.rb	Thu, 05 May 2016 15:01:12 -0500

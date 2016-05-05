@@ -1,209 +1,205 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-<title>README - RDoc Documentation</title>
+  <title>File: README.txt [RDoc Documentation]</title>
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
-</script>
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
 
-<script src="./js/jquery.js"></script>
-<script src="./js/darkfish.js"></script>
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
 
-<link href="./css/fonts.css" rel="stylesheet">
-<link href="./css/rdoc.css" rel="stylesheet">
-
-
-
-<body id="top" role="document" class="file">
-<nav role="navigation">
-  <div id="project-navigation">
-    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
-  <h2>
-    <a href="./index.html" rel="home">Home</a>
-  </h2>
-
-  <div id="table-of-contents-navigation">
-    <a href="./table_of_contents.html#pages">Pages</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </div>
-</div>
-
-    <div id="search-section" role="search" class="project-section initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <div id="search-field-wrapper">
-      <input id="search-field" role="combobox" aria-label="Search"
-             aria-autocomplete="list" aria-controls="search-results"
-             type="text" name="search" placeholder="Search" spellcheck="false"
-             title="Type to search, Up and Down to navigate, Enter to load">
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
     </div>
 
-    <ul id="search-results" aria-label="Search Results"
-        aria-busy="false" aria-expanded="false"
-        aria-atomic="false" class="initially-hidden"></ul>
-  </form>
-</div>
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
 
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./CoinFlipper.html">CoinFlipper</a></li>
+        
+          <li><a href="./Fight.html">Fight</a></li>
+        
+          <li><a href="./GameController.html">GameController</a></li>
+        
+          <li><a href="./Move.html">Move</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Room.html">Room</a></li>
+        
+          <li><a href="./SubState.html">SubState</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
   </div>
 
-  
-<div class="nav-section">
-  <h3>Table of Contents</h3>
-
-  <ul class="link-list" role="directory">
-    <li><a href="#label-Application+Design+and+Architecture">Application Design and Architecture</a>
-    <li><a href="#label-Installing+and+Running+the+Application">Installing and Running the Application</a>
-    <li><a href="#label-4-2B1+Architectural+View+Model">4+1 Architectural View Model</a>
-    <li><a href="#label-Logical+View">Logical View</a>
-    <li><a href="#label-Process+View">Process View</a>
-    <li><a href="#label-Development+View">Development View</a>
-    <li><a href="#label-Physical+View">Physical View</a>
-    <li><a href="#label-Scenarios">Scenarios</a>
-    <li><a href="#label-Patterns+Used">Patterns Used</a>
-    <li><a href="#label-Acknowledgments">Acknowledgments</a>
-    <li><a href="#label-References">References</a>
-  </ul>
-</div>
-
-
-  <div id="project-metadata">
-    <div id="fileindex-section" class="nav-section">
-  <h3>Pages</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./README_txt.html">README</a>
-  
-  </ul>
-</div>
-
-  </div>
-</nav>
-
-<main role="main" aria-label="Page README.txt">
-
-<h1 id="label-Application+Design+and+Architecture">Application Design and Architecture<span><a href="#label-Application+Design+and+Architecture">&para;</a> <a href="#top">&uarr;</a></span></h1>
-<dl class="rdoc-list note-list"><dt>Authors
-<dd>
+  <div id="documentation">
+    
+<h1>Application Design and Architecture</h1>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Authors</p></td>
+<td>
 <p>Brian Flores, Alejandro Rojas, Eduardo Azuri, Eduardo Rodríguez</p>
-</dd><dt>Date
-<dd>
+</td></tr><tr><td class="rdoc-term"><p>Date</p></td>
+<td>
 <p>May 04, 2016</p>
-</dd></dl>
+</td></tr></table>
 
 <p>In this documentation we will explain the steps required in order to
-install and run the game “Sobrebibiendo Ekatepek”. We&#39;ll now explain
-the directory structure for the application and its documentation:</p>
+install and run the game “Sobrebibiendo Ekatepek”. We’ll now explain the
+directory structure for the application and its documentation:</p>
 
 <pre>Arqui/
       ├─ doc/                        Folder produced by RDoc.
-      ├─ images/                     Folder for the documentation&#39;s image files.
-      └─ src/                        Folder for the application&#39;s source code.
-           ├─ public/                Folder for the server&#39;s public documents.
-           │       └─ stylesheets/   Folder for the application&#39;s CSS files.
-           ├─ models/                Folder for the application&#39;s models.
-           └─ views/                 Folder for the application&#39;s views (ERB files).</pre>
+      ├─ images/                     Folder for the documentation's image files.
+      └─ src/                        Folder for the application's source code.
+           ├─ public/                Folder for the server's public documents.
+           │       └─ stylesheets/   Folder for the application's CSS files.
+           ├─ models/                Folder for the application's models.
+           └─ views/                 Folder for the application's views (ERB files).</pre>
 
-<h2 id="label-Installing+and+Running+the+Application">Installing and Running the Application<span><a href="#label-Installing+and+Running+the+Application">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2>Installing and Running the Application</h2>
 
 <p>In order to run the game you have to position yourself inside the directory
-of the project and then run the file “ecatepec.rb” with the following
-command:</p>
+of the project and then run the file “<a
+href="ecatepec_rb.html">ecatepec.rb</a>” with the following command:</p>
 
 <pre>ruby -I . -w &quot;ecatepec.rb&quot;</pre>
 
-<p>Afterwards, point your web brower at the following URL:
-<code>http://localhost:4567/</code></p>
+<p>Afterwards, point your web brower at the following URL: +<a
+href="http://localhost:4567">localhost:4567</a>/+</p>
 
-<h2 id="label-4-2B1+Architectural+View+Model">4+1 Architectural View Model<span><a href="#label-4-2B1+Architectural+View+Model">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2>4+1 Architectural View Model</h2>
 
-<p>We&#39;ll now explain the different views that conform the architectural
-model of our application.</p>
+<p>We’ll now explain the different views that conform the architectural model
+of our application.</p>
 
-<h3 id="label-Logical+View">Logical View<span><a href="#label-Logical+View">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<h3>Logical View</h3>
 
 <p>The logical view contains information about the various parts of the
 system. In UML the logical view is typically modelled using <em>class
 diagrams</em>.</p>
 
-<p>For example, the following figure represents the UML class diagram for the
-<code>Greeter</code> model and its factory class:</p>
+<p>In the following diagram, it displays in UML classes diagrams the <a
+href="GameController.html">GameController</a>, <a
+href="Room.html">Room</a>, <a href="SubState.html">SubState</a>, <a
+href="Move.html">Move</a>, <a href="CoinFlipper.html">CoinFlipper</a>,<a
+href="Fight.html">Fight</a>  classes and its subclasses for the Model.</p>
 
 <p><img src="../doc/images/logical.png" /></p>
 
-<p>You can include as many of these diagrams as you consider necessary. Note
-that you only need to specify the names of the classes and their
-relationships. Don&#39;t include attributes or method names in these
-diagrams.</p>
+<h3>Process View</h3>
 
-<p>To include an image in this document, copy it to the <code>images</code>
-directory and refer it as: <code>link:../images/some_image.png</code>. You
-can use any web supported image format (PNG, JPEG, GIF, etc.).</p>
+<p>Even though the system handles sessions apart from others, the system has
+no concurrent processes due the fact of the simple design.</p>
 
-<h3 id="label-Process+View">Process View<span><a href="#label-Process+View">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<h3>Development View</h3>
 
-<p>The process view describes the concurrent processes within the system. In
-UML, <em>activity diagrams</em> are used to model this view.</p>
+<p>The system is a stand-alone application, thus, it has no software modules
+or subsystems.</p>
 
-<h3 id="label-Development+View">Development View<span><a href="#label-Development+View">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<h3>Physical View</h3>
 
-<p>The development view focusses on software modules and subsystems. In UML,
-<em>package diagrams</em> are used to model the development view.</p>
-
-<h3 id="label-Physical+View">Physical View<span><a href="#label-Physical+View">&para;</a> <a href="#top">&uarr;</a></span></h3>
-
-<p>The physical view describes the physical deployment of the system,
-revealing which pieces of software run on what pieces of hardware. In UML,
-<em>deployment diagrams</em> are used to model the physical view.</p>
+<p>In order for the system to function, the Web server that hosts “<a
+href="ecatepec_rb.html">ecatepec.rb</a>”, the Sinatra Framework, SQL-Lite
+and Sequel need to be installed. The following diagram shows the physicial
+implementation:</p>
 
 <p>For example, this is the deployment diagram for our application:</p>
 
 <p><img src="../doc/images/physical.png" /></p>
 
-<h3 id="label-Scenarios">Scenarios<span><a href="#label-Scenarios">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<h3>Scenarios</h3>
 
-<p>This view describes the functionality of the system from the perspective
-from outside world. It contains diagrams describing what the system is
-supposed to do from a black box perspective. UML <em>use case diagrams</em>
-are used for this view.</p>
+<p>In a regular scenario, the user enters the web page of the server. Then, it
+asks to enter his/her name and after that, the epic adventure starts. At
+first, the user is greeted with the view that displays his/hers current
+stats [health, respect &amp; money], the screen that narrates the adventure
+and the buttons the user can push in order to make said actions. The
+following diagram displays the actions the user can do:</p>
 
 <p><img src="../doc/images/cases.png" /></p>
 
-<h2 id="label-Patterns+Used">Patterns Used<span><a href="#label-Patterns+Used">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2>Patterns Used</h2>
 
 <p>The patterns that were used within our project are:</p>
 <ul><li>
-<p><strong>State Pattern</strong>: The <code>ecatepec.rb</code> file consists
-of a series of Sinatra <em>routes</em>. Sinatra is a DSL for creating web
-applications in Ruby.</p>
+<p><b>State Pattern</b>: We used this pattern in order to separate the
+functionality into states and substates that could handle the instances of
+the game better. The states are instances of <tt>Room</tt> and are handled
+in the <tt>clases.rb</tt>.</p>
 </li><li>
-<p><strong>Model View Controller</strong>: The application follows the
-classical web implementation of the MVC architectural pattern. The models
-(<code>.rb</code> files) and views (<code>.erb</code> files) are stored in
-the corresponding <code>models</code> and <code>views</code> directory. The
-controller is contained in <code>server.rb</code> file.</p>
+<p><b>Model View Controller</b>: The application follows the classical web
+implementation of the MVC architectural pattern. The models (<tt>.rb</tt>
+files) and views (<tt>.erb</tt> files) are stored in the corresponding
+<tt>models</tt> and <tt>views</tt> directory. The controller is contained
+in <tt>ecatepec.rb</tt> file.</p>
 </li><li>
-<p><strong>Strategy Factory</strong>: The <code>gameFactory</code> is used to
-create <code>Game</code> instances by specifying the desired language
-during its creation.</p>
+<p><b>Strategy Factory</b>: Each of our states behaves differently so we send
+a <tt>Proc</tt> with all the code that it must implement. This is handled
+in the <tt>gameFactory</tt> class that is contained inside the
+<tt>clases.rb</tt>.</p>
 </li></ul>
 
-<h2 id="label-Acknowledgments">Acknowledgments<span><a href="#label-Acknowledgments">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2>Acknowledgments</h2>
 
-<p>We&#39;d like to recognize the labor of every member in our team for their
-dedication towards success. Additionalywe&#39;d like to thank the
-following.</p>
+<p>We’d like to recognize the labor of every member in our team for their
+dedication towards success. Additionalywe’d like to thank the following.</p>
 <ul><li>
 <p>Samantha Ponce &amp; nail (Edgar López).</p>
 </li><li>
 <p>Saul de Nova for his constant support and laughs.</p>
 </li></ul>
 
-<h2 id="label-References">References<span><a href="#label-References">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2>References</h2>
 <ul><li>
 <p>Ph. Kruchten. <em>The 4+1 View Model of Architecture.</em> IEEE Software,
 vol. 12 (6), pp. 45-50, 1995. <a
@@ -219,13 +215,14 @@ Books Online</a> Accessed May 3, 2016.</p>
 href="http://ruby-doc.org/stdlib-2.2.3/libdoc/rdoc/rdoc/RDoc/Markup.html#class-RDoc::Markup-label-Block+Markup">http://ruby-doc.org/stdlib-2.2.3/libdoc/rdoc/rdoc/RDoc/Markup.html</a>
 Accessed May 3, 2016.</p>
 </li></ul>
-</main>
 
+  </div>
 
-
-<footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
-  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
-</footer>
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
 
