@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">BasicObject
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create_game2">#create_game2</a>
+    
+    <li ><a href="#method-i-h">#h</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="DB">DB
+        
+        <dd><p>Connects the to the DataBase</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_game2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_game2</span><span
+            class="method-args">(state, substate, money, life, fights, respect)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method to build a <a href="GameController.html">GameController</a> instance
+using the parameters state, substate, life, money, fights and respect</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create_game2-source">
+            <pre><span class="ruby-comment"># File models/gameFactory.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_game2</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">substate</span>, <span class="ruby-identifier">money</span>, <span class="ruby-identifier">life</span>, <span class="ruby-identifier">fights</span>, <span class="ruby-identifier">respect</span>)
+
+  <span class="ruby-identifier">game</span> = <span class="ruby-constant">GameController</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">money</span>,<span class="ruby-identifier">life</span>,<span class="ruby-identifier">fights</span>,<span class="ruby-identifier">respect</span>)
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 7</span>
+
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Para entrar dirigete al norte&quot;</span> , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">40</span>) ; <span class="ruby-string">&quot;Estas entrando&quot;</span>} , <span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">room1</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">7</span>,<span class="ruby-string">&quot;Despiertas en un lugar lugubre, lo unico que alcanzas a ver es un letrero que dice Bienvenido a Ecatepec&quot;</span>)
+  <span class="ruby-identifier">room1</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room1</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">7</span>, <span class="ruby-identifier">room1</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 40</span>
+  <span class="ruby-identifier">room40</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">40</span>,<span class="ruby-string">&quot;Comienzas a caminar, huele a drogas en el aire&quot;</span>)
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Te espantas así que tienes dos opciones: ir al sur para huir, o entrar a una tienda que encuentras abierta al este&quot;</span> , 
+    <span class="ruby-keyword">nil</span> ,  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">7</span>) ; <span class="ruby-string">&quot;Has Huido&quot;</span>} , <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">29</span>) ; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">5</span>; <span class="ruby-string">&quot;Entraste a la tienda, tu respeto aumentó&quot;</span>} , <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">room40</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room40</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">40</span>, <span class="ruby-identifier">room40</span>)
+
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 29</span>
+  <span class="ruby-identifier">room29</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">29</span>,<span class="ruby-string">&quot;La tienda tiene rastros de que hubo una pelea aqui&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Tira una moneda para probar tu suerte&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">1</span>); <span class="ruby-string">&quot;Encontraste una cartera&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">2</span>); <span class="ruby-string">&quot;Alguien te ha retado&quot;</span>})
+  <span class="ruby-identifier">coin2</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>,<span class="ruby-string">&quot;Tira una moneda para probar tu suerte&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">money</span> <span class="ruby-operator">+=</span> <span class="ruby-value">200</span>; <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">4</span>); <span class="ruby-string">&quot;Encontraste 200 varos&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">2</span>); <span class="ruby-string">&quot;Alguien viene&quot;</span>})  
+  <span class="ruby-identifier">fight1</span> = <span class="ruby-constant">Fight</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-string">&quot;La Britney te ha retado a unos navajasos, puedes huir si le das 50 varos o puedes pelear con ella&quot;</span> , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">3</span>); <span class="ruby-string">&quot;Estas entrando a la pelea...&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> 
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">money</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">50</span> 
+        <span class="ruby-identifier">game</span>.<span class="ruby-identifier">money</span> <span class="ruby-operator">-=</span><span class="ruby-value">50</span>
+        <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span> <span class="ruby-operator">-=</span><span class="ruby-value">5</span>
+        <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">4</span>)
+        <span class="ruby-string">&quot;Has huido, tu respeto baja&quot;</span>
+      <span class="ruby-keyword">else</span> 
+        <span class="ruby-string">&quot;No puedes huir&quot;</span>
+      <span class="ruby-keyword">end</span>
+      })
+  <span class="ruby-identifier">coin3</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">3</span>,<span class="ruby-string">&quot;Tira una moneda para probar tu suerte en la pelea&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">4</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span> <span class="ruby-operator">+=</span><span class="ruby-value">15</span> ; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">fights</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>; <span class="ruby-string">&quot;Has derrotado a la Britney, tu respeto aumenta&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">4</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span><span class="ruby-operator">-=</span><span class="ruby-value">15</span>; <span class="ruby-string">&quot;La britney te ha derrotado y tu vida baja 15 puntos&quot;</span>})
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">4</span>, <span class="ruby-string">&quot;Para salir de la tienda ve al norte , para ir a otro lado y probar tu suerte ve al este.&quot;</span> , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">40</span>) ; <span class="ruby-string">&quot;Sales de la tienda&quot;</span>} , <span class="ruby-keyword">nil</span>, <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">6</span>) ; <span class="ruby-string">&quot;Entras al este&quot;</span>}, <span class="ruby-keyword">nil</span>)
+
+  <span class="ruby-identifier">room29</span>.<span class="ruby-identifier">state</span>= <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room29</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin2</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">fight1</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin3</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">29</span>, <span class="ruby-identifier">room29</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 6</span>
+
+  <span class="ruby-identifier">room6</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">6</span>,<span class="ruby-string">&quot;Sales a una avenida principal con forma de L, ves a drogadictos tirados en el piso pidiendo dinero.&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Hay un sonido repentino, giras. Tira una moneda&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">43</span>); <span class="ruby-string">&quot;Te diriges al oeste&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">1</span>); <span class="ruby-string">&quot;Solo hay una ventana&quot;</span>})
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-string">&quot;Si quieres asomarte ve al este si quieres seguir por la calle ve al norte &quot;</span> , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">29</span>) ; <span class="ruby-string">&quot;Sigues por la calle&quot;</span>} , <span class="ruby-keyword">nil</span>, <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">28</span>) ; <span class="ruby-string">&quot;Decides asomarte&quot;</span>}, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">room6</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room6</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">6</span>, <span class="ruby-identifier">room6</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 28</span>
+
+
+  <span class="ruby-identifier">room28</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">28</span>,<span class="ruby-string">&quot;Alcanzas a ver un Mercado artesanal a la distancia, intentas ver que hay y encuentras la puerta a un edificio que parece tener un teléfono&quot;</span>)
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Ve hacia el este&quot;</span> , 
+    <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">6</span>) ; <span class="ruby-string">&quot;Te diriges al este&quot;</span>}, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">room28</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room28</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">28</span>, <span class="ruby-identifier">room28</span>)
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 43</span>
+  <span class="ruby-identifier">room43</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">43</span>, <span class="ruby-string">&quot;El barrio esta cada vez más lugubre&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;El lider de los metalicos llamado “El brayan” te reta a unos navajazos a muerte, tira una moneda&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">1</span>); <span class="ruby-string">&quot;El Brayan ha intentado picarte pero lo esquivaste&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">36</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span>= <span class="ruby-value">0</span>; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span> <span class="ruby-operator">-=</span> <span class="ruby-value">30</span>; <span class="ruby-string">&quot;El Brayan te ha soltado un navajazo mortal y se ha ido. Has perdido todo tu respeto y tu vida baja 30 puntos&quot;</span>})
+  <span class="ruby-identifier">coin2</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>,<span class="ruby-string">&quot;La pelea sigue, tira otra moneda para probar tu suerte&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">2</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">100</span>; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">fights</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>; <span class="ruby-string">&quot;Esquivaste otro najajazo y lograste vencerlo, tu respeto aumenta considerablemente&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">36</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span>= <span class="ruby-value">0</span>; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">money</span> = <span class="ruby-value">0</span>; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span> <span class="ruby-operator">-=</span> <span class="ruby-value">30</span>; <span class="ruby-string">&quot;El Brayan te derrotó con una patada mortal. Has perdido todo tu respeto y dinero, tu vida baja 30 puntos&quot;</span>})
+  <span class="ruby-identifier">coin3</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-string">&quot;El brayan soltó una mona de guayaba, la tomas, tira una moneda&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">36</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span> = <span class="ruby-value">100</span>; <span class="ruby-string">&quot;La mona tiene grandes poderes curativos, tu vida está al máximo&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">36</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span> <span class="ruby-operator">-=</span> <span class="ruby-value">5</span>; <span class="ruby-string">&quot;La mona tiene malos efectos, tu vida baja&quot;</span>})
+  <span class="ruby-identifier">room43</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room43</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin2</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin3</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">43</span>, <span class="ruby-identifier">room43</span>)
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 36</span>
+  <span class="ruby-identifier">room36</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">36</span>, <span class="ruby-string">&quot;Sigues caminando por la calle, ves una Fuente en donde varias personas se estan bañando&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Tira una moneda&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">41</span>); <span class="ruby-string">&quot;Ahora te diriges al norte&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">15</span>);  <span class="ruby-string">&quot;Ahora te dirijes al sur&quot;</span>})
+  <span class="ruby-identifier">room36</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room36</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">36</span>, <span class="ruby-identifier">room36</span>);
+  
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 41</span>
+  <span class="ruby-identifier">room41</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">41</span>, <span class="ruby-string">&quot;Dejas la fuente atras y descubres una calle llena de cholos&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Tira una moneda para decidir a que cholo dirigirte&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">1</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">20</span>; <span class="ruby-string">&quot;Le has caido bien al cholo, se ponen a bailar cholocumbia y tu respeto aumenta&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">room</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-value">1</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span><span class="ruby-operator">-=</span><span class="ruby-value">15</span>; <span class="ruby-string">&quot;El cholo te ha mordido y tu vida baja 15 puntos&quot;</span>})
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-string">&quot;Dirigete al sur&quot;</span> , 
+    <span class="ruby-keyword">nil</span> , <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">35</span>) ; <span class="ruby-string">&quot;Caminas hacia el sur&quot;</span>} ,<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment">#35</span>
+  <span class="ruby-identifier">room41</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room41</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>).<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">41</span>, <span class="ruby-identifier">room41</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 15</span>
+
+  <span class="ruby-identifier">room15</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">15</span>, <span class="ruby-string">&quot;En la misma calle descubres una gasolinera&quot;</span>)
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Si quieres explorar la gasolinera ve hacia el norte. Si quieres huir ve hacia el sur&quot;</span> , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">12</span>) ; <span class="ruby-string">&quot;Caminas hacia el norte para explorar&quot;</span>} , <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">24</span>) ; <span class="ruby-string">&quot;Caminas hacia el sur&quot;</span>} ,<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">room15</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room15</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">15</span>, <span class="ruby-identifier">room15</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 12</span>
+
+  <span class="ruby-identifier">room12</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">12</span>, <span class="ruby-string">&quot;Entras al edificio de la gasolinera lentamente, huele a mona de guayaba&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Has encontrado una mochila, puede contener buenas cosas. Prueba tu suerte tirando una moneda&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">3</span>; <span class="ruby-string">&quot;Has encontrado una navaja legendaria, tu respeto incrementará&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span><span class="ruby-operator">-=</span><span class="ruby-value">3</span>; <span class="ruby-string">&quot;La mochila contenía jeringas usadas, te picas con una de ellas y tu vida baja. Escapas de ese lugar por el sur&quot;</span>})
+
+  <span class="ruby-identifier">room12</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room12</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">12</span>, <span class="ruby-identifier">room12</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 24 </span>
+  <span class="ruby-identifier">room24</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">24</span>, <span class="ruby-string">&quot;Este lugar es totalmente diferente a todos los demás, un hermoso y limpio jardín en donde descansar&quot;</span>)
+  <span class="ruby-identifier">move</span>  = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Por lugar para descansar, tu vida subiera a 90 puntos cuando decidas salirte. camina hacia el Sur&quot;</span> , 
+     <span class="ruby-keyword">nil</span> , <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span>=<span class="ruby-value">90</span>; <span class="ruby-string">&quot;Caminas hacia el sur&quot;</span>} ,<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+
+  <span class="ruby-identifier">room24</span>.<span class="ruby-identifier">state</span>= <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room24</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">24</span>, <span class="ruby-identifier">room24</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 35</span>
+
+  <span class="ruby-identifier">room35</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">35</span>, <span class="ruby-string">&quot;Llegas al cuarto principal de la bodega, ahi se encuentra el jardin “magico” lleno de droga&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-string">&quot;Hay un obstaculo en el camino, tira una moneda para probar tu suerte&quot;</span>, 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">8</span>); <span class="ruby-string">&quot;Te haz tropezado y causado un alboroto en la otra sala&quot;</span>} , 
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">9</span>); <span class="ruby-string">&quot;Has pasado el obstaculo y ahora sales de la sala&quot;</span>})
+  <span class="ruby-identifier">room35</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room35</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">35</span>, <span class="ruby-identifier">room35</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 42</span>
+
+<span class="ruby-identifier">room42</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">42</span>, <span class="ruby-string">&quot;Has llegado al zócalo de Ecatepec, el lugar esta muy concurrido y hay diferentes calles y una casa que llama mucho la atención &quot;</span>)
+ <span class="ruby-identifier">move</span> = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Para observar lo que hay dentro de la casa, camina hacia el Sur. 
+  Si quieres dirigirte al estacionamiento ve hacia el Este. 
+  Camina hacia el Norte si deseas ir a la calle de enfrente, o al Oeste para la calle de a lado &quot;</span>,
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">9</span>);  <span class="ruby-string">&quot;Vas en camino hacia la calle que sigue&quot;</span>},
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">26</span>);  <span class="ruby-string">&quot;Caminas hacia la casa extraña&quot;</span>},
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">13</span>);  <span class="ruby-string">&quot;Te acercas al estacionamiento&quot;</span>},
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">38</span>); <span class="ruby-string">&quot;Vas camino a la calle de a lado&quot;</span>} )
+ <span class="ruby-identifier">room42</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+ <span class="ruby-identifier">room42</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+ <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">42</span>, <span class="ruby-identifier">room42</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 8</span>
+<span class="ruby-identifier">room8</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">8</span>, <span class="ruby-string">&quot;Estas en la sala especialde la bodega, aqui todos parecen sospechosos&quot;</span>)
+<span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Un chaca llamado “El aletz” te ataca con un picahielo. Tira una moneda para ver que pasa&quot;</span>,
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">43</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span><span class="ruby-operator">-=</span><span class="ruby-value">15</span>; <span class="ruby-string">&quot;El aletz te ha clavado, tu vida baja y escapas del lugar&quot;</span>},
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">43</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">20</span>; <span class="ruby-string">&quot;Has derrotado al aletz, y sales inmediatamente de la sala&quot;</span>})
+<span class="ruby-identifier">room8</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+<span class="ruby-identifier">room8</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>);
+<span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">8</span>, <span class="ruby-identifier">room8</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 9</span>
+
+<span class="ruby-identifier">room9</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">9</span>, <span class="ruby-string">&quot;Sigues en la gran bodega y encuentras varias cajas&quot;</span>)
+<span class="ruby-identifier">move</span> = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Tienes la opción de seguir en la pbodega por el Este, o salir por el Sur&quot;</span>,
+  <span class="ruby-keyword">nil</span> ,
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">41</span>); <span class="ruby-string">&quot;Estas saliendo del lugar&quot;</span>},
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">8</span>); <span class="ruby-string">&quot;Te adentras más a la bodega&quot;</span>}, <span class="ruby-keyword">nil</span>)
+<span class="ruby-identifier">room9</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+<span class="ruby-identifier">room9</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+<span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">9</span>, <span class="ruby-identifier">room9</span>)
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 13</span>
+
+  <span class="ruby-identifier">room13</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">13</span>, <span class="ruby-string">&quot;Te encuentras en un estacionamiento bastante oscuro y con poco carros, el olor a gasolina emana de todos lados&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Un viene viene con un flow violento te ataca. Tira una moneda para ver si puedes vencerlo&quot;</span>,
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">10</span>; <span class="ruby-string">&quot;Le has vencido y tu respeto aumenta&quot;</span>},
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span><span class="ruby-operator">-=</span><span class="ruby-value">10</span>; <span class="ruby-string">&quot;El viene  viene te ha derrotado, tu vida baja 10 puntos &quot;</span>})
+  <span class="ruby-identifier">room13</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room13</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">13</span>, <span class="ruby-identifier">room13</span>)
+
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 26</span>
+
+  <span class="ruby-identifier">room26</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">26</span>, <span class="ruby-string">&quot;La casa es bastante extraña y hay unos sujetos con cara de pocos amigos&quot;</span>)
+  <span class="ruby-identifier">fight1</span> = <span class="ruby-constant">Fight</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Para pasar de ahi tienes dos opciones, huir y dales 100 varos a los sujetos o pelear con ellos&quot;</span>,
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">life</span> <span class="ruby-operator">-=</span><span class="ruby-value">20</span> ; <span class="ruby-identifier">game</span>.<span class="ruby-identifier">respect</span><span class="ruby-operator">+=</span><span class="ruby-value">50</span>; <span class="ruby-string">&quot;Los sujetos te atacan con todas sus armas y pierdes mucha vida&quot;</span>},
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">42</span>); <span class="ruby-identifier">game</span>.<span class="ruby-identifier">money</span><span class="ruby-operator">-=</span><span class="ruby-value">100</span> ; <span class="ruby-string">&quot;Le pagas su moche a todos y te vas&quot;</span>})
+  <span class="ruby-identifier">room26</span>.<span class="ruby-identifier">state</span> =  <span class="ruby-identifier">fight1</span>
+  <span class="ruby-identifier">room26</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">fight1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">26</span>, <span class="ruby-identifier">room26</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 38</span>
+  
+  <span class="ruby-identifier">room38</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">38</span>, <span class="ruby-string">&quot;Esta parece ser una avenida principal, hay mucho trasporte publico por aquí&quot;</span>)
+  <span class="ruby-identifier">coin1</span> = <span class="ruby-constant">CoinFlipper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;A lo lejos encuentras el TrasnporTEC, tira una moneda para ver si lo alcanzas&quot;</span>,
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">14</span>);  <span class="ruby-string">&quot;Lo has alcanzado, estas salvado&quot;</span>},
+    <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">room</span>, <span class="ruby-identifier">game</span><span class="ruby-operator">|</span> <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-value">6</span>);  <span class="ruby-string">&quot;Lastima, te ha dejado el camión y ahora estas perdido&quot;</span>})
+  <span class="ruby-identifier">room38</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">coin1</span>
+  <span class="ruby-identifier">room38</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">coin1</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">38</span>, <span class="ruby-identifier">room38</span>)
+
+<span class="ruby-comment">########################################################################################################################################</span>
+<span class="ruby-comment">##Room 14</span>
+
+  <span class="ruby-identifier">room14</span> = <span class="ruby-constant">Room</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">14</span>, <span class="ruby-string">&quot;Lo has logado, sobreviviste a Ecatepec. Ahora estas comodamente en el camión camino a tu nueva aventura en los examenes finales, Buena suerte&quot;</span>)
+  <span class="ruby-identifier">move</span> = <span class="ruby-constant">Move</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-string">&quot;Disfruta tu camino al Tec&quot;</span> ,
+     <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-string">&quot;Relajate, para qué te mueves? Todo esta bien&quot;</span>},
+     <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-string">&quot;Relajate, para qué te mueves? Todo esta bien&quot;</span>},
+     <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-string">&quot;Relajate, para qué te mueves? Todo esta bien&quot;</span>},
+     <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-string">&quot;Relajate, para qué te mueves? Todo esta bien&quot;</span>})
+  <span class="ruby-identifier">room14</span>.<span class="ruby-identifier">state</span> = <span class="ruby-identifier">move</span>
+  <span class="ruby-identifier">room14</span>.<span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">move</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">set_state</span>(<span class="ruby-value">14</span>, <span class="ruby-identifier">room14</span>)
+
+
+
+
+
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">go_state</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-identifier">game</span>.<span class="ruby-identifier">state</span>.<span class="ruby-identifier">go_sub</span>(<span class="ruby-identifier">substate</span>)
+  <span class="ruby-identifier">game</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-h" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">h</span><span
+            class="method-args">(text)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Scapes special html characters to prevent html injection</p>
+          
+          
+
+          
+          <div class="method-source-code" id="h-source">
+            <pre><span class="ruby-comment"># File ecatepec.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">h</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span>.<span class="ruby-identifier">escape_html</span>(<span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
