@@ -208,7 +208,7 @@ room42 = Room.new(42, "Has llegado al zócalo de Ecatepec, el lugar esta muy con
   Proc.new{|room, game| game.go_state(9);  "Vas en camino hacia la calle que sigue"},
   Proc.new{|room, game| game.go_state(26);  "Caminas hacia la casa extraña"},
   Proc.new{|room, game| game.go_state(13);  "Te acercas al estacionamiento"},
-  Proc.new{|room, game| game.go_state(38);  "Vas camino a la calle de a lado"} )
+  Proc.new{|room, game| game.go_state(38); "Vas camino a la calle de a lado"} )
  room42.state = move
  room42.add_state(move)
  game.set_state(42, room42)
