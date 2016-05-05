@@ -7,7 +7,7 @@ $().ready(function () {
 
         $("#money").html(r.money);
         $("#respect").html(r.respect);
-        $("#fights").html(r.fights);
+        $("#fights").html(r.fights + "  " + r.state);
 
     });
   }

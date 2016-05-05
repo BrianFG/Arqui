@@ -181,7 +181,7 @@ def create_game2(state, substate, money, life, fights, respect)
 ##Room 24 
   room24 = Room.new(24, "Este lugar es totalmente diferente a todos los demás, un hermoso y limpio jardín en donde descansar")
   move  = Move.new(0, "Por lugar para descansar, tu vida subiera a 90 puntos cuando decidas salirte. camina hacia el Sur" , 
-     nil , Proc.new{|room, game| game.go_state(24); game.life=90; "Caminas hacia el sur"} ,nil, nil)
+     nil , Proc.new{|room, game| game.go_state(42); game.life=90; "Caminas hacia el sur"} ,nil, nil)
 
   room24.state= move
   room24.add_state(move)
@@ -197,6 +197,22 @@ def create_game2(state, substate, money, life, fights, respect)
   room35.state = coin1
   room35.add_state(coin1)
   game.set_state(35, room35)
+
+########################################################################################################################################
+##Room 42
+
+ room42 = Room.new(42, "Has llegado al zócalo de Ecatepec, el lugar esta muy concurrido y hay diferentes calles y una casa que llama mucho la atención ")
+ move = Move.new(0, "Para observar lo que hay dentro de la casa, camina hacia el Sur. 
+  Si quieres dirigirte al estacionamiento ve hacia el Este. 
+  Camina hacia el Norte si deseas ir a la calle de enfrente, o al Oeste para la calle de a lado ",
+  Proc.new{|room, game| game.go_state(9);  "Vas en camino hacia la calle que sigue"},
+  Proc.new{|room, game| game.go_state(26);  "Caminas hacia la casa extraña"},
+  Proc.new{|room, game| game.go_state(13);  "Te acercas al estacionamiento"},
+  Proc.new{|room, game| game.go_state(38);  "Vas camino a la calle de a lado"} )
+ room42.state = move
+ room42.add_state(move)
+ game.set_state(42, room42)
+
 
 
   game.go_state(state)
