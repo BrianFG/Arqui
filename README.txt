@@ -9,12 +9,17 @@ In this documentation we will explain the steps required in order to install and
 
    Arqui/
          ├─ doc/                        Folder produced by RDoc.
-         ├─ images/                     Folder for the documentation's image files.
-         └─ src/                        Folder for the application's source code.
-              ├─ public/                Folder for the server's public documents.
-              │       └─ stylesheets/   Folder for the application's CSS files.
-              ├─ models/                Folder for the application's models.
-              └─ views/                 Folder for the application's views (ERB files).
+         ├─ models/                     Folder that include the source code.
+         ├─ public/                     Folder all the javascript files and resources.
+         └─ views/                      Folder for the application's views (ERB files).
+
+The gems that you require in order to run the project are:
+
+	1. Sinatra
+	2. SQLite 3
+	3. Bootsrap
+	4. JQuery
+	5. Sequel
 
 
 == Installing and Running the Application
@@ -33,21 +38,17 @@ We'll now explain the different views that conform the architectural model of ou
 
 The logical view contains information about the various parts of the system. In UML the logical view is typically modelled using <em>class diagrams</em>.
 
-In the following diagram, it displays in UML classes diagrams the GameController, Room, SubState, Move, CoinFlipper,Fight  classes and its subclasses for the Model.
-
+In the following diagram, it displays in UML classes diagrams the GameController, Room, SubState, Move, CoinFlipper, Fight  classes and its subclasses for the Model.
 
 link:../doc/images/logical.png
 
-
 === Process View
 
-Even though the system handles sessions apart from others, the system has no concurrent processes due the fact of the simple design.
+Even though the system handles sessions apart from others, the system has no concurrent processes due to the fact of the simple design.
 
 === Development View
 
 The system is a stand-alone application, thus, it has no software modules or subsystems.
-
-
 
 === Physical View
 
