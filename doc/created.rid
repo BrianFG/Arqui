@@ -1,4 +1,4 @@
-Thu, 05 May 2016 12:30:11 -0500
+Thu, 05 May 2016 12:32:57 -0500
 ./game.db	Thu, 05 May 2016 12:26:06 -0500
 ./models/clases.rb	Thu, 05 May 2016 12:25:27 -0500
 ./models/game.rb	Tue, 03 May 2016 07:56:07 -0500
@@ -17,12 +17,8 @@ Thu, 05 May 2016 12:30:11 -0500
 ./public/fonts/Street-Robot-Inline.ttf	Wed, 05 Mar 2014 23:41:02 -0600
 ./public/fonts/CurseoftheZombie.ttf	Tue, 24 Feb 2015 17:16:40 -0600
 ./public/fonts/glyphicons-halflings-regular.ttf	Mon, 04 Apr 2016 13:57:02 -0500
-./public/fonts/glyphicons-halflings-regular.svg	Mon, 04 Apr 2016 13:57:02 -0500
 ./public/fonts/Searfont.ttf	Tue, 07 May 2002 22:08:52 -0500
 ./public/fonts/glyphicons-halflings-regular.woff	Mon, 04 Apr 2016 13:57:02 -0500
-./public/javascripts/main.js	Thu, 05 May 2016 11:27:14 -0500
-./public/javascripts/bootstrap.js	Mon, 04 Apr 2016 13:57:02 -0500
-./public/javascripts/jquery-1.11.3.min.js	Fri, 15 Apr 2016 12:51:03 -0500
 ./public/images/fight2.png	Tue, 03 May 2016 09:29:37 -0500
 ./public/images/flip.png	Tue, 03 May 2016 09:00:57 -0500
 ./public/images/run.png	Tue, 03 May 2016 09:32:04 -0500

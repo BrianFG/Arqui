@@ -32,7 +32,7 @@ get '/play' do
   erb :play
 end
 
-#Route to the play webpage
+#Route to the play webpage, take a name as parameter and creates a new game record on the database. The id is stored on the session
 get '/create_game' do
   @name = params[:name]
   if @name
@@ -59,7 +59,7 @@ get '/next' do
     :won => game.won?}.to_json}"
 end
 
-#get route that returns a json containing the current game state
+#get route that returns a json containing the current game state from database 
 get '/state' do
   code = session[:code]
   row = games[id: code]
