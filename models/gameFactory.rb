@@ -201,7 +201,7 @@ def create_game2(state, substate, money, life, fights, respect)
 ########################################################################################################################################
 ##Room 42
 
- room42 = Room.new(42, "Has llegado al zócalo de Ecatepec, el lugar esta muy concurrido y hay diferentes calles y una casa que llama mucho la atención ")
+room42 = Room.new(42, "Has llegado al zócalo de Ecatepec, el lugar esta muy concurrido y hay diferentes calles y una casa que llama mucho la atención ")
  move = Move.new(0, "Para observar lo que hay dentro de la casa, camina hacia el Sur. 
   Si quieres dirigirte al estacionamiento ve hacia el Este. 
   Camina hacia el Norte si deseas ir a la calle de enfrente, o al Oeste para la calle de a lado ",
@@ -212,6 +212,78 @@ def create_game2(state, substate, money, life, fights, respect)
  room42.state = move
  room42.add_state(move)
  game.set_state(42, room42)
+
+########################################################################################################################################
+##Room 8
+room8 = Room.new(8, "Estas en la sala especialde la bodega, aqui todos parecen sospechosos")
+coin1 = CoinFlipper.new(0, "Un chaca llamado “El aletz” te ataca con un picahielo. Tira una moneda para ver que pasa",
+  Proc.new{|room, game| game.go_state(43); game.life-=15; "El aletz te ha clavado, tu vida baja y escapas del lugar"},
+  Proc.new{|room, game| game.go_state(43); game.respect+=20; "Has derrotado al aletz, y sales inmediatamente de la sala"})
+room8.state = coin1
+room8.add_state(coin1);
+game.set_state(8, room8)
+
+########################################################################################################################################
+##Room 9
+
+room9 = Room.new(9, "Sigues en la gran bodega y encuentras varias cajas")
+move = Move.new(0, "Tienes la opción de seguir en la pbodega por el Este, o salir por el Sur",
+  nil ,
+  Proc.new{|room, game| game.go_state(41); "Estas saliendo del lugar"},
+  Proc.new{|room, game| game.go_state(8); "Te adentras más a la bodega"}, nil)
+room9.state = move
+room9.add_state(move)
+game.set_state(9, room9)
+
+
+########################################################################################################################################
+##Room 13
+
+  room13 = Room.new(13, "Te encuentras en un estacionamiento bastante oscuro y con poco carros, el olor a gasolina emana de todos lados")
+  coin1 = CoinFlipper.new(0, "Un viene viene con un flow violento te ataca. Tira una moneda para ver si puedes vencerlo",
+    Proc.new{|room, game| game.go_state(42); game.respect+=10; "Le has vencido y tu respeto aumenta"},
+    Proc.new{|room, game| game.go_state(42); game.life-=10; "El viene  viene te ha derrotado, tu vida baja 10 puntos "})
+  room13.state = coin1
+  room13.add_state(coin1)
+  game.set_state(13, room13)
+
+
+########################################################################################################################################
+##Room 26
+
+  room26 = Room.new(26, "La casa es bastante extraña y hay unos sujetos con cara de pocos amigos")
+  fight1 = Fight.new(0, "Para pasar de ahi tienes dos opciones, huir y dales 100 varos a los sujetos o pelear con ellos",
+    Proc.new{|room, game| game.go_state(42); game.life -=20 ; game.respect+=50; "Los sujetos te atacan con todas sus armas y pierdes mucha vida"},
+    Proc.new{|room, game| game.go_state(42); game.money-=100 ; "Le pagas su moche a todos y te vas"})
+  room26.state =  fight1
+  room26.add_state(fight1)
+  game.set_state(26, room26)
+
+########################################################################################################################################
+##Room 38
+  
+  room38 = Room.new(38, "Esta parece ser una avenida principal, hay mucho trasporte publico por aquí")
+  coin1 = CoinFlipper.new(0, "A lo lejos encuentras el TrasnporTEC, tira una moneda para ver si lo alcanzas",
+    Proc.new{|room, game| game.go_state(14);  "Lo has alcanzado, estas salvado"},
+    Proc.new{|room, game| game.go_state(6);  "Lastima, te ha dejado el camión y ahora estas perdido"})
+  room38.state = coin1
+  room38.add_state(coin1)
+  game.set_state(38, room38)
+
+########################################################################################################################################
+##Room 14
+
+  room14 = Room.new(14, "Lo has logado, sobreviviste a Ecatepec. Ahora estas comodamente en el camión camino a tu nueva aventura en los examenes finales, Buena suerte")
+  move = Move.new(0, "Disfruta tu camino al Tec" ,
+     Proc.new{"Relajate, para qué te mueves? Todo esta bien"},
+     Proc.new{"Relajate, para qué te mueves? Todo esta bien"},
+     Proc.new{"Relajate, para qué te mueves? Todo esta bien"},
+     Proc.new{"Relajate, para qué te mueves? Todo esta bien"})
+  room14.state = move
+  room14.add_state(move)
+  game.set_state(14, room14)
+
+
 
 
 

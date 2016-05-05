@@ -189,10 +189,10 @@ class Move  < SubState
   end
 
   def west (room , game)
-    if @west.nil?
+    if @left.nil?
       "No puedes ir al Oeste"
     else
-      @west.call(room, game)
+      @left.call(room, game)
     end
   end
 end
